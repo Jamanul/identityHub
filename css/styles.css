@@ -6,21 +6,24 @@
 :root {
   --font-size-base: 16px;
   --font-weight-normal: 400;
-  --font-color-text : #CAC6DD;
+  --font-color-text: #cac6dd;
 }
 body {
   font-family: "Aeonik Regular";
   background-color: #0c0a14;
-  background-image: url("../assests/images/background.png");
+  background-image: url("../assests/images/background.svg");
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   color: var(--font-color-text);
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; 
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.mx-auto{
+    margin: 0px auto;
+}
 .font-sora {
   font-family: Sora;
 }
@@ -34,8 +37,8 @@ img {
   width: 100%;
   height: 100%;
 }
-.inherit-width{
-    width: inherit;
+.inherit-width {
+  width: inherit;
 }
 .justify-between {
   justify-content: space-between;
@@ -49,8 +52,14 @@ img {
 .text-center {
   text-align: center;
 }
+.text-white {
+    color: #fff !important;
+}
 .font-medium {
   font-weight: 500;
+}
+.font-semibold {
+    font-weight: 600;
 }
 .font-bold {
   font-weight: 700;
@@ -71,28 +80,28 @@ img {
   font-size: 60px;
 }
 .vector-container {
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0px auto;
-  padding: 0px 300px;
+  padding: 0px 225px;
 }
 .font-primary {
-    color: #cad1e9;
+  color: #cad1e9;
 }
 .relative {
-    position: relative;
+  position: relative;
 }
 .absolute {
-    position: absolute;
+  position: absolute;
 }
 /* navbar */
 
 .nav {
-  margin: 20px auto;
+  margin: 20px 44px;
   padding: 12px;
   border-radius: 12px;
-border: 1px solid rgba(255, 255, 255, 0.10);
-background: rgba(15, 12, 23, 0.14);
-backdrop-filter: blur(17px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 12, 23, 0.14);
+  backdrop-filter: blur(17px);
 }
 .nav-logo {
   font-family: "Source Code Pro";
@@ -100,44 +109,71 @@ backdrop-filter: blur(17px);
   letter-spacing: -0.27px;
 }
 .nav-left {
-    gap: 8px;
+  gap: 8px;
 }
 .nav-middle {
-    gap: 24px;
+  gap: 24px;
 }
-.nav-button {
-    background: #0c0a14;
-    border: 1px solid transparent; 
-    color: #cad1e9;
-    padding: 10px 20px;
-    border-radius: 12px; 
-    background-clip: padding-box; 
-
-    gap: 2px;
+.primary-button {
+  position: relative;
+  background: #0c0a14;
+  border: 1px solid transparent;
+  color: #cad1e9;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-clip: padding-box;
+  gap: 2px;
+  transition: box-shadow 0.3s ease-in;
+  background-image: linear-gradient(to right, #ffffff14, #ffffff01);
 }
-.nav-button::after {
-    content: ''; 
-    position: absolute;
-    top: -1px; 
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    z-index: -1; 
-    border-radius: 12px; 
-    background: linear-gradient(to right, #090EDB, #8D1EA2);
-}
-.nav-right:hover {
-    box-shadow: 
-    -4px 0 10px 3px rgba(9, 14, 219, 0.4),  
-        4px 0 10px 3px rgba(141, 30, 162, 0.4);
-}
-.nav-right {
-    background: linear-gradient(to right, #FFFFFF14, #FFFFFF01);
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-    border-radius: 12px;
-    transition: box-shadow 0.3s ease-in-out; 
+.primary-button::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(to right, #090edb, #8d1ea2);
 }
 
+.primary-button:hover {
+  box-shadow: -4px 0 10px 3px rgba(9, 14, 219, 0.4),
+    4px 0 10px 3px rgba(141, 30, 162, 0.4);
+}
 
+/* hero section */
+.hero-top-button {
+  padding: 5px 16.5px;
+  margin-top: 64px;
+  margin-bottom: 8px;
+  box-shadow: -4px 0 10px 3px rgba(9, 14, 219, 0.4),
+    4px 0 10px 3px rgba(141, 30, 162, 0.4);
+}
+.hero-title {
+  line-height: 120%;
+  background: linear-gradient(180deg, #f33cc0 13.43%, #4349ff 73.37%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 65%;
+    margin-bottom: 24px;
+}
+.hero-dsc {
+    line-height: 140%; 
+    max-width: 56%;
+    margin-bottom: 32px;
+}
+.title-line {
+    top: 59%;
+    right: 32%;
+}
+.button-secondary {
+    background: linear-gradient(87deg, #090EDB 8.8%, #DA24BB 84.38%);
+    border: 0.1px solid #FFE1E1;
+}
+.hero-button-container{
+    gap: 16px;
+    margin-bottom: 50px;
+}
