@@ -74,7 +74,7 @@ img {
   font-size: 14px;
 }
 .text-lg {
-  font-size: 18px;
+  font-size: 20px;
 }
 .text-xl {
   font-size: 24px;
@@ -179,6 +179,13 @@ img {
 .button-secondary {
   background: linear-gradient(87deg, #090edb 8.8%, #da24bb 84.38%);
   border: 0.1px solid #ffe1e1;
+}
+.special-gradiant {
+  background-image: linear-gradient(
+    80deg,
+    rgba(83, 84, 108, 0.08) 0%,
+    rgba(83, 84, 108, 0.08) 98.05%
+  );
 }
 .hero-button-container {
   gap: 16px;
@@ -337,7 +344,8 @@ img {
 }
 /* service section */
 .service-container {
-  padding: 100px 0px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .service-tile {
   line-height: 120%;
@@ -351,9 +359,119 @@ img {
 }
 .service-dsc {
   line-height: 140%;
-  margin-bottom: 40px;
+  margin: 16px 0px 40px 0px;
+}
+.card {
+  padding: 32px;
+  top: 0px;
+}
+.card-logo-contaier {
+  border-radius: 13px;
+  background: var(
+    --Linear-2,
+    linear-gradient(143deg, #0a0fdb -10.56%, #8d00a6 111.87%)
+  );
+  padding: 10px;
+  width: max-content;
+}
+.card-title {
+  font-size: 28px;
+  line-height: 120%;
+  margin-top: 28px;
+}
+.card-dsc {
+  line-height: 140%;
+  margin: 10px 0px 24px 0px;
+}
+.explore-padding {
+  padding: 10px 6px;
+}
+.card-gradiant {
+  width: 242px;
+  height: 242px;
+  background: linear-gradient(128deg, #0f1eff, #0064ff);
+  filter: blur(60px);
+  opacity: 0.4;
+  mix-blend-mode: color-dodge;
+  border-radius: 121px;
+  top: 85px;
+  left: 128px;
+}
+/* pricing section */
+.button {
+  position: relative; /* Ensure the ::before is positioned correctly */
+  width: 300px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Slightly softer border for a clean look */
+  background: black; /* Bright and vibrant background */
+  background-image: linear-gradient(
+    80deg,
+    rgba(83, 84, 108, 0.38) 98.05%,
+    rgba(83, 84, 108, 0.38) 98.05%
+  );
+  border-radius: 12px; /* Add border-radius for rounded corners */
 }
 
+/* ::before pseudo-element to create the gradient border */
+.button::before {
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute;
+  top: -4px;
+  left: -4px; /* Position the border outside the button */
+  right: -4px;
+  bottom: -4px; /* Ensure the border surrounds the button */
+  border-radius: 16px; /* Match the border-radius of the button for rounded corners */
+  background: linear-gradient(
+    90deg,
+    #090edb,
+    #8d1ea2
+  ); /* Apply gradient border */
+  z-index: -1; /* Ensure it stays behind the button */
+}
+/* testimonial */
+.testimonial-button {
+  padding: 5px 9px;
+}
+.testimonial-div {
+  border-radius: 20px;
+  border: 1.2px solid var(--Strock-linear, #101132);
+  background: linear-gradient(
+    80deg,
+    rgba(0, 0, 0, 0.16) 25.25%,
+    rgba(83, 84, 108, 0.16) 98.05%
+  );
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  margin-top: 40px;
+}
+.testimonial-inner-div {
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid #272834;
+  background: linear-gradient(
+    80deg,
+    rgba(51, 51, 62, 0.16) 6.21%,
+    rgba(83, 84, 108, 0.16) 98.02%
+  );
+  gap: 16px;
+}
+.testimonial-info {
+  gap: 6px;
+  margin: 4px 0px 20px 0px;
+  width: max-content;
+}
+.testimonial-dsc {
+  line-height: 140%;
+  margin-bottom: 32px;
+}
+.disc-ul {
+  list-style-type: disc;
+  gap: 16px;
+}
+.active {
+  border: 1px solid blue;
+  padding: 9px;
+}
 @keyframes spin {
   from {
     transform: rotate(0deg);
