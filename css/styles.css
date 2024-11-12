@@ -99,6 +99,9 @@ img {
 .absolute {
   position: absolute;
 }
+.span-block {
+  display: block;
+}
 /* navbar */
 
 .nav {
@@ -152,10 +155,9 @@ img {
 /* hero section */
 .hero-top-button {
   padding: 5px 16.5px;
-
   margin-bottom: 8px;
-  box-shadow: -4px 0 10px 3px rgba(9, 14, 219, 0.4),
-    4px 0 10px 3px rgba(141, 30, 162, 0.4);
+  box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.2) inset,
+    0px 4px 50px 0px rgba(159, 100, 239, 0.4);
 }
 .hero-title {
   line-height: 120%;
@@ -164,13 +166,11 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 24px;
-  /* max-width: 72%; */
 }
 .hero-dsc {
   line-height: 140%;
   margin-bottom: 32px;
   padding: 0px 60px;
-  /* width: 62%; */
 }
 .title-line {
   top: 30.5%;
@@ -214,74 +214,110 @@ img {
 .padding-fix {
   padding: 2px;
 }
-.first {
-  height: 140%;
-  width: 100%;
-  border: #090edb 1px solid;
+.circle {
+  position: absolute;
+  border: 1px solid #cac6dd;
   border-radius: 100%;
-  top: -2%;
-  left: 0px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.planet {
+  position: absolute;
+  border-radius: 100%;
+  animation: spin 10s linear infinite;
+}
+
+/* Specific sizes and positions for backgrounds */
+.first { height: 125%; width: 100%; top: -2%; left: 0; opacity: 0.05; }
+.second { height: 103%; width: 85%; top: 8%; left: 7%; }
+.third { height: 83%; width: 67%; top: 19%; left: 16%; }
+.fourth { height: 60%; width: 48%; top: 31%; left: 26%; }
+.fifth { height: 36%; width: 27%; top: 42%; left: 36%; }
+
+/* Planet specific sizes, positions, and gradients */
+.first-planet {
+  height: 16px; width: 16px; top: 17%; left: 3.5%;
+  background: linear-gradient(180deg, #dd734f 0%, #1a1a32 100%);
+}
+.second-planet {
+  height: 24px; width: 24px; top: 59%; left: -1%;
+  background: linear-gradient(180deg, #88e5be 0%, #1a1a32 100%);
+}
+.third-planet {
+  height: 12px; width: 12px; top: 41%; left: 19.5%;
+  background: linear-gradient(180deg, #B9AEDF 0%, #1A1A32 100%);
+}
+.fourth-planet {
+  height: 24px; width: 24px; top: 41%; right: 1%;
+  background: linear-gradient(180deg, #88e5be 0%, #1a1a32 100%);
+}
+.fifth-planet {
+  height: 8px; width: 8px; top: 10%; right: 3.5%;
+  background: linear-gradient(180deg, #dd734f 0%, #1a1a32 100%);
 }
 .svg-container-two {
   position: absolute;
   width: 100%;
-  height: 140%;
-  top: 0;
-  right: 20%;
+  height: 80%;
+  top: 30%;
+  left: 10%;
   z-index: -1;
   border-radius: 20px;
 }
-.base-box {
+
+.svg-container-two::before {
+  content: "";
   position: absolute;
-  width: 100%;
-  height: 140%;
-  background-color: #907cff;
-  opacity: 0;
-  border-radius: 20px; /* Adjust if rounded corners needed */
-  filter: blur(50px);
-}
-
-/* Overlay boxes with different colors */
-.overlay-box {
-  position: absolute;
-  border-radius: 20px; /* Match the effect of the SVG shapes */
-  filter: blur(50px);
-  opacity: 0.08;
-}
-
-/* Blue overlay box */
-.blue-box {
-  width: 50%;
-  height: 50%;
-  background-color: #18a0fb;
-  top: 20%;
-  left: 20%;
-}
-
-/* Red overlay box */
-.red-box {
-  width: 60%;
-  height: 60%;
-  background-color: #f2371f;
-  top: 10%;
-  left: 30%;
-}
-
-/* Pink overlay box */
-.pink-box {
-  width: 80%;
-  height: 60%;
-  background-color: #ee46d3;
-  top: 20%;
-  left: 50%;
-}
-
-/* Cyan overlay box */
-.cyan-box {
-  width: 40%;
-  height: 40%;
-  background-color: #00c5df;
-  bottom: 10%;
-  left: 40%;
+  inset: 0;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(24, 160, 251, 0.5),
+      transparent 60%
+    ),
+    /* Blue */
+      radial-gradient(
+        circle at 30% 10%,
+        rgba(242, 55, 31, 0.5),
+        transparent 60%
+      ),
+    /* Red */
+      radial-gradient(
+        circle at 50% 20%,
+        rgba(238, 70, 211, 0.5),
+        transparent 60%
+      ),
+    /* Pink */
+      radial-gradient(circle at 40% 90%, rgba(0, 0, 255, 0.5), transparent 60%); /* Even more bluish Cyan */
+  background-blend-mode: color-dodge;
+  mix-blend-mode: color-dodge;
+  filter: blur(198px);
+  z-index: -1;
 }
 /* service section */
+.service-container {
+  padding: 100px 0px;
+}
+.service-tile{
+  line-height: 120%;
+  margin: 8px 0px 16px 0px;
+}
+.span-gradient{
+  background: linear-gradient(87deg, #090EDB 24.27%, #8D1EA2 87.36%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.service-dsc {
+  line-height: 140%; 
+  margin-bottom: 40px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
