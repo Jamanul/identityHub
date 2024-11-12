@@ -229,31 +229,72 @@ img {
 }
 
 /* Specific sizes and positions for backgrounds */
-.first { height: 125%; width: 100%; top: -2%; left: 0; opacity: 0.05; }
-.second { height: 103%; width: 85%; top: 8%; left: 7%; }
-.third { height: 83%; width: 67%; top: 19%; left: 16%; }
-.fourth { height: 60%; width: 48%; top: 31%; left: 26%; }
-.fifth { height: 36%; width: 27%; top: 42%; left: 36%; }
+.first {
+  height: 125%;
+  width: 100%;
+  top: -2%;
+  left: 0;
+  opacity: 0.05;
+}
+.second {
+  height: 103%;
+  width: 85%;
+  top: 8%;
+  left: 7%;
+}
+.third {
+  height: 83%;
+  width: 67%;
+  top: 19%;
+  left: 16%;
+}
+.fourth {
+  height: 60%;
+  width: 48%;
+  top: 31%;
+  left: 26%;
+}
+.fifth {
+  height: 36%;
+  width: 27%;
+  top: 42%;
+  left: 36%;
+}
 
 /* Planet specific sizes, positions, and gradients */
 .first-planet {
-  height: 16px; width: 16px; top: 17%; left: 3.5%;
+  height: 16px;
+  width: 16px;
+  top: 17%;
+  left: 3.5%;
   background: linear-gradient(180deg, #dd734f 0%, #1a1a32 100%);
 }
 .second-planet {
-  height: 24px; width: 24px; top: 59%; left: -1%;
+  height: 24px;
+  width: 24px;
+  top: 59%;
+  left: -1%;
   background: linear-gradient(180deg, #88e5be 0%, #1a1a32 100%);
 }
 .third-planet {
-  height: 12px; width: 12px; top: 41%; left: 19.5%;
-  background: linear-gradient(180deg, #B9AEDF 0%, #1A1A32 100%);
+  height: 12px;
+  width: 12px;
+  top: 41%;
+  left: 19.5%;
+  background: linear-gradient(180deg, #b9aedf 0%, #1a1a32 100%);
 }
 .fourth-planet {
-  height: 24px; width: 24px; top: 41%; right: 1%;
+  height: 24px;
+  width: 24px;
+  top: 41%;
+  right: 1%;
   background: linear-gradient(180deg, #88e5be 0%, #1a1a32 100%);
 }
 .fifth-planet {
-  height: 8px; width: 8px; top: 10%; right: 3.5%;
+  height: 8px;
+  width: 8px;
+  top: 10%;
+  right: 3.5%;
   background: linear-gradient(180deg, #dd734f 0%, #1a1a32 100%);
 }
 .svg-container-two {
@@ -298,18 +339,18 @@ img {
 .service-container {
   padding: 100px 0px;
 }
-.service-tile{
+.service-tile {
   line-height: 120%;
   margin: 8px 0px 16px 0px;
 }
-.span-gradient{
-  background: linear-gradient(87deg, #090EDB 24.27%, #8D1EA2 87.36%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.span-gradient {
+  background: linear-gradient(87deg, #090edb 24.27%, #8d1ea2 87.36%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .service-dsc {
-  line-height: 140%; 
+  line-height: 140%;
   margin-bottom: 40px;
 }
 
