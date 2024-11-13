@@ -86,9 +86,9 @@ img {
   font-size: 60px;
 }
 .vector-container {
-  max-width: 1920px;
+  max-width: 1320px;
   margin: 0px auto;
-  padding: 0px 300px;
+  padding: 0px auto;
 }
 .font-primary {
   color: #cad1e9;
@@ -103,14 +103,12 @@ img {
   display: block;
 }
 /* navbar */
-
 .nav {
   margin: 20px 58.5px;
   padding: 12px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(15, 12, 23, 0.14);
-  backdrop-filter: blur(17px);
 }
 .nav-logo {
   font-family: "Source Code Pro";
@@ -471,6 +469,30 @@ img {
 .active {
   border: 1px solid blue;
   padding: 9px;
+}
+
+/* footer */
+.footer-container {
+  max-width: 1840px;
+  padding: 40px 40px 24px 40px;
+}
+.li-padding {
+  padding:32px 48px ;
+  letter-spacing: 0.42px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.footer-top{
+  border-bottom: 1px solid var(--neutral-015, rgba(255, 255, 255, 0.10));
+  margin-bottom: 24px;
+}
+.footer-logo-container{
+  gap: 32px;
+}
+.footer-logo{
+  padding: 11.4px;
+  border-radius: 100%;
+  background-color: #1B1530;
 }
 @keyframes spin {
   from {
