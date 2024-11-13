@@ -86,12 +86,15 @@
             <div
               class="flex justify-center items-center font-primary hero-button-container"
             >
-              <button
+              <div class="relative">
+                <button
                 type="button"
-                class="primary-button relative text-center text-white font-medium special-gradiant"
+                class="button-glass text-center text-white font-medium"
               >
                 Start free trial
               </button>
+              <img src="./assests/icons/button-border.svg" alt="border" class="absolute test-glass">
+            </div>
               <button
                 type="button"
                 class="primary-button relative text-center text-white font-medium button-secondary"
@@ -175,20 +178,20 @@
                 </div>
               </div>
             </div>
-            <!-- gradient -->
+            <!--background gradient -->
             <div class="svg-container-two"></div>
           </div>
           <!-- ellipses and planets -->
-          <div class="first circle"></div>
+          <div class="first circle absolute"></div>
           <div class="first-planet planet"></div>
           <div class="second-planet planet"></div>
           <div class="third-planet planet"></div>
           <div class="fourth-planet planet"></div>
           <div class="fifth-planet planet"></div>
-          <div class="second circle"></div>
-          <div class="third circle"></div>
-          <div class="fourth circle"></div>
-          <div class="fifth circle"></div>
+          <div class="second circle absolute"></div>
+          <div class="third circle absolute"></div>
+          <div class="fourth circle absolute"></div>
+          <div class="fifth circle absolute"></div>
         </div>
       </section>
       <!-- service section -->
@@ -323,14 +326,140 @@
         </div>
       </section>
       <!-- pricing section -->
-      <section>
-        <!-- <div class="button-div">
-            <button class="button">Test button</button>
-            <button class="button-two">test-button two</button>
-        </div> -->
+      <section class="vector-container service-container relative">
+        <!-- top button -->
+        <div class="flex justify-center items-center font-primary">
+            <button
+              type="button"
+              class="primary-button relative text-sm hero-top-button"
+            >
+           Pricing
+            </button>
+          </div>
+          <h1 class="text-xxl font-primary font-semibold text-center font-sora">Our <span class="span-gradient">Pricing</span> Package</h1>
+          <!-- card container -->
+          <div class="pricing-card-container flex items-center">
+            <!-- card one -->
+            <div class="pricing-card flex flex-column">
+                <div class="flex flex-column">
+                    <h3 class="text-white font-sora pricing-title">Basic</h3>
+                    <p class="text-lg">AI chatbot, personalized <br> recommendations</p>
+                </div>
+                <div class="flex items-center">
+                    <h3 class="text-xxl font-sora text-white">$</h3>
+                    <h3 class="text-xxl font-sora text-white font-medium price">0</h3>
+                </div>  
+                <div class="relative">
+                    <button
+                    type="button"
+                    class="button-glass text-center text-white font-medium price-button"
+                  >
+                    Get Started
+                  </button>
+                  <img src="./assests/icons/stroke.svg" alt="border" class="absolute test-glass transform-buttom">
+                </div>
+                <div class="flex flex-column">
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Type of threat</p>
+                    </div>
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Online presence</p>
+                    </div>
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Access to all modules</p>
+                    </div>
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Notability</p>
+                    </div>
+                </div>
+            </div>
+            <!-- card two -->
+            <div class="pricing-card flex flex-column middle-price-padding">
+                <div class="flex flex-column">
+                    <h3 class="text-white font-sora pricing-title">Premium</h3>
+                    <p class="text-lg">Advanced AI chatbot, priority support, <br> analytics dashboard</p>
+                </div>
+                <div class="flex items-center">
+                    <h3 class="text-xxl font-sora text-white">$</h3>
+                    <h3 class="text-xxl font-sora text-white font-medium price">9.99</h3>
+                </div>  
+         
+                    <button
+                    type="button"
+                    class="primary-button button-secondary text-center text-white font-medium price-button"
+                  >
+                    Get Started
+                  </button>
+                <div class="flex flex-column">
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Type of threat</p>
+                    </div>
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Online presence</p>
+                    </div>
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Access to all modules</p>
+                    </div>
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Notability</p>
+                    </div>
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Optimize existing websites</p>
+                    </div>
+                </div>
+            </div>
+            <!-- card three -->
+            <div class="pricing-card flex flex-column">
+                <div class="flex flex-column">
+                    <h3 class="text-white font-sora pricing-title">Enterprise</h3>
+                    <p class="text-lg">AI chatbot, personalized <br> recommendations</p>
+                </div>
+                <div class="flex items-center">
+                    <h3 class="text-xxl font-sora text-white">$</h3>
+                    <h3 class="text-xxl font-sora text-white font-medium price">20.99</h3>
+                </div>  
+                <div class="relative">
+                    <button
+                    type="button"
+                    class="button-glass text-center text-white font-medium price-button"
+                  >
+                    Get Started
+                  </button>
+                  <img src="./assests/icons/stroke.svg" alt="border" class="absolute test-glass transform-buttom">
+                </div>
+                <div class="flex flex-column">
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Type of threat</p>
+                    </div>
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Online presence</p>
+                    </div>
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Access to all modules</p>
+                    </div>
+                    <div class="flex items-center checkmark-container">
+                        <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
+                        <p class="text-lg">Notability</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="svg-container-two price-svg"></div>
       </section>
       <!-- review section -->
-      <section class="vector-container service-container">
+      <section class="vector-container service-container ">
         <div class="flex justify-center items-center font-primary">
           <button
             type="button"
@@ -387,6 +516,34 @@
           </div>
         </div>
       </section>
+      <!-- join us section -->
+       <section class="vector-container join-us-contaier relative">
+        <h1 class="text-center text-white font-sora font-semibold text-xxxl relative">Be part of the future of <br> IdentityHub</h1>
+        <div class="absolute join-us-line">
+            <img src="./assests/icons/line-two.svg" alt="underline" class="">
+        </div>
+        <p class="text-center text-lg font-sora join-us-dsc">
+            Unleash the power of AI within Brainwave. Upgrade <span class="span-block">your productivity with Brainwave, the open AI chat app.</span>
+        </p>
+        <div
+        class="flex justify-center items-center"
+      >
+        <button
+          type="button"
+          class="primary-button relative text-center text-white font-medium button-secondary"
+        >
+        Start free trail
+        </button>
+      </div>
+      <div class="svg-container-two join-us-svg"></div>
+     <div class="absolute circle secondary-circle-one">
+     </div>
+     <div class="secondary-circle-two circle absolute"></div>
+     <div class="secondary-circle-three circle absolute"></div>
+     <div class="secondary-circle-four circle absolute"></div>
+     <div class="secondary-circle-five circle absolute"></div>
+    </div>
+       </section>
     </main>
     <footer class="footer-container">
         <!-- footer top -->

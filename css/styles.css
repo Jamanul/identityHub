@@ -121,11 +121,22 @@ img {
 .nav-middle {
   gap: 24px;
 }
+.test-glass {
+  left: 0px;
+}
+.button-glass {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.2) inset;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
 .primary-button {
   position: relative;
   background: #0c0a14;
   border: 1px solid transparent;
   color: #cad1e9;
+  box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.2) inset;
   padding: 10px 20px;
   border-radius: 12px;
   background-clip: padding-box;
@@ -181,8 +192,9 @@ img {
 .special-gradiant {
   background-image: linear-gradient(
     80deg,
-    rgba(83, 84, 108, 0.08) 0%,
-    rgba(83, 84, 108, 0.08) 98.05%
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.1) 100%
   );
 }
 .hero-button-container {
@@ -220,7 +232,6 @@ img {
   padding: 2px;
 }
 .circle {
-  position: absolute;
   border: 1px solid #cac6dd;
   border-radius: 100%;
   opacity: 0.1;
@@ -321,19 +332,16 @@ img {
       rgba(24, 160, 251, 0.5),
       transparent 60%
     ),
-    /* Blue */
       radial-gradient(
         circle at 30% 10%,
         rgba(242, 55, 31, 0.5),
         transparent 60%
       ),
-    /* Red */
       radial-gradient(
         circle at 50% 20%,
         rgba(238, 70, 211, 0.5),
         transparent 60%
       ),
-    /* Pink */
       radial-gradient(circle at 40% 90%, rgba(0, 0, 255, 0.5), transparent 60%); /* Even more bluish Cyan */
   background-blend-mode: color-dodge;
   mix-blend-mode: color-dodge;
@@ -396,35 +404,47 @@ img {
   left: 128px;
 }
 /* pricing section */
-.button {
-  position: relative; /* Ensure the ::before is positioned correctly */
-  width: 300px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Slightly softer border for a clean look */
-  background: black; /* Bright and vibrant background */
-  background-image: linear-gradient(
-    80deg,
-    rgba(83, 84, 108, 0.38) 98.05%,
-    rgba(83, 84, 108, 0.38) 98.05%
-  );
-  border-radius: 12px; /* Add border-radius for rounded corners */
+.pricing-card-container {
+  gap: 24px;
+  margin-top: 40px;
+  padding: 0px 20px;
 }
-
-/* ::before pseudo-element to create the gradient border */
-.button::before {
-  content: ""; /* Empty content for the pseudo-element */
-  position: absolute;
-  top: -4px;
-  left: -4px; /* Position the border outside the button */
-  right: -4px;
-  bottom: -4px; /* Ensure the border surrounds the button */
-  border-radius: 16px; /* Match the border-radius of the button for rounded corners */
-  background: linear-gradient(
-    90deg,
-    #090edb,
-    #8d1ea2
-  ); /* Apply gradient border */
-  z-index: -1; /* Ensure it stays behind the button */
+.pricing-card {
+  gap: 24px;
+  border-radius: 32px;
+  border: 1px solid var(--neutral-015, rgba(255, 255, 255, 0.1));
+  background: var(
+    --Glass-linear,
+    linear-gradient(
+      80deg,
+      rgba(0, 0, 0, 0.16) 25.25%,
+      rgba(83, 84, 108, 0.16) 98.05%
+    )
+  );
+  padding: 32px;
+}
+.pricing-title{
+  font-size: 32px;
+  margin-bottom: 16px;
+  line-height: 48px;
+}
+.price{
+  font-size: 88px;
+}
+.price-button{
+padding: 15px 137px;
+}
+.checkmark-container{
+  padding: 20px 0px;
+  gap: 16px;
+  border-bottom: 1px solid var(--neutral-015, rgba(255, 255, 255, 0.10));
+}
+.middle-price-padding{
+  padding: 48px 32px;
+}
+.price-svg{
+  height: 58%;
+  width: 90%;
 }
 /* testimonial */
 .testimonial-button {
@@ -438,7 +458,6 @@ img {
     rgba(0, 0, 0, 0.16) 25.25%,
     rgba(83, 84, 108, 0.16) 98.05%
   );
-  backdrop-filter: blur(8px);
   padding: 40px;
   margin-top: 40px;
 }
@@ -470,29 +489,76 @@ img {
   border: 1px solid blue;
   padding: 9px;
 }
-
+/* join us dsc */
+.join-us-dsc {
+  margin: 24px 0px 32px 0px;
+  line-height: 160%;
+}
+.join-us-contaier {
+  margin-top: 163px;
+  margin-bottom: 163px;
+  padding-top: 100px;
+}
+.join-us-line {
+  left: 38%;
+}
+.join-us-svg {
+  width: 60%;
+  left: 35%;
+}
+.secondary-circle-one {
+  width: 56.4%;
+  height: 182.8%;
+  top: -30%;
+  left: 20.5%;
+}
+.secondary-circle-two {
+  width: 47.59%;
+  height: 154.43%;
+  top: -16%;
+  left: 25%;
+}
+.secondary-circle-three {
+  width: 37.13%;
+  height: 120.4%;
+  top: 0%;
+  left: 30.5%;
+}
+.secondary-circle-four {
+  width: 26.1%;
+  height: 84.7%;
+  top: 18%;
+  left: 36.5%;
+}
+.secondary-circle-five {
+  width: 16.7%;
+  height: 54.2%;
+  top: 33%;
+  left: 41.5%;
+}
 /* footer */
 .footer-container {
   max-width: 1840px;
   padding: 40px 40px 24px 40px;
+  margin: 0px auto;
 }
 .li-padding {
-  padding:32px 48px ;
+  padding: 32px 48px;
   letter-spacing: 0.42px;
   font-size: 12px;
   line-height: 20px;
 }
-.footer-top{
-  border-bottom: 1px solid var(--neutral-015, rgba(255, 255, 255, 0.10));
+.footer-top {
+  border-bottom: 1px solid var(--neutral-015, rgba(255, 255, 255, 0.1));
   margin-bottom: 24px;
 }
-.footer-logo-container{
+.footer-logo-container {
   gap: 32px;
 }
-.footer-logo{
+.footer-logo {
   padding: 11.4px;
   border-radius: 100%;
-  background-color: #1B1530;
+  background-color: #1b1530;
 }
 @keyframes spin {
   from {
