@@ -11,7 +11,7 @@
 body {
   font-family: "Aeonik Regular";
   background-color: #0c0a14;
-  background-image: url("../assests/images/background.svg");
+  background-image: url("../assests/images/background-m.png");
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   color: var(--font-color-text);
@@ -101,6 +101,15 @@ img {
 }
 .span-block {
   display: block;
+}
+.gap-24 {
+  gap: 24px;
+}
+.line-140 {
+  line-height: 140%;
+}
+.gap-16 {
+  gap: 16px;
 }
 /* navbar */
 .nav {
@@ -237,13 +246,11 @@ img {
   opacity: 0.1;
   z-index: -1;
 }
-
 .planet {
   position: absolute;
   border-radius: 100%;
   animation: spin 10s linear infinite;
 }
-
 /* Specific sizes and positions for backgrounds */
 .first {
   height: 125%;
@@ -332,17 +339,9 @@ img {
       rgba(24, 160, 251, 0.5),
       transparent 60%
     ),
-      radial-gradient(
-        circle at 30% 10%,
-        rgba(242, 55, 31, 0.5),
-        transparent 60%
-      ),
-      radial-gradient(
-        circle at 50% 20%,
-        rgba(238, 70, 211, 0.5),
-        transparent 60%
-      ),
-      radial-gradient(circle at 40% 90%, rgba(0, 0, 255, 0.5), transparent 60%); /* Even more bluish Cyan */
+    radial-gradient(circle at 30% 10%, rgba(242, 55, 31, 0.5), transparent 60%),
+    radial-gradient(circle at 50% 20%, rgba(238, 70, 211, 0.5), transparent 60%),
+    radial-gradient(circle at 40% 90%, rgba(0, 0, 255, 0.5), transparent 60%); /* Even more bluish Cyan */
   background-blend-mode: color-dodge;
   mix-blend-mode: color-dodge;
   filter: blur(198px);
@@ -403,6 +402,137 @@ img {
   top: 85px;
   left: 128px;
 }
+/* why choose us section */
+.row-card-container {
+  margin-top: 40px;
+  gap: 40px;
+}
+.row-card {
+  border-radius: 20px;
+  border: 1.2px solid #101132;
+  background: linear-gradient(
+    80deg,
+    rgba(0, 0, 0, 0.16) 25.25%,
+    rgba(83, 84, 108, 0.16) 98.05%
+  );
+  padding: 40px;
+  gap: 139px;
+  z-index: -1;
+}
+.row-card-left {
+  gap: 20px;
+  width: 55%;
+}
+.row-card-right{
+  width: 43%;
+}
+.scroll-bar {
+  width: 2.4px;
+  background-image: linear-gradient(
+    90deg,
+    #3639ff 13.51%,
+    rgba(108, 85, 255, 0) 89.18%,
+    rgba(99, 101, 255, 0) 89.18%
+  );
+  height: 100%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 4px 12px rgba(54, 115, 255, 0.5) inset,
+    /* Stronger inner blue shadow */ 0px 0px 15px rgba(72, 145, 255, 0.7),
+    /* Vibrant outer blue shadow */ 0px 0px 20px rgba(99, 181, 255, 0.5);
+}
+.scroll-icon {
+  background: #1e21e9;
+  padding: 6.5px 8px;
+  border-radius: 100%;
+}
+.row-card-title {
+  font-size: 32px;
+  line-height: 120%;
+  margin-bottom: 42px;
+}
+.box-one {
+  width: 395.779px;
+  height: 277.612px;
+  border-radius: 12px;
+  border: 0.809px solid #2d2e48;
+  background: linear-gradient(
+    100deg,
+    rgba(0, 132, 255, 0.16) 7%,
+    rgba(255, 171, 144, 0.16) 48.55%,
+    rgba(253, 138, 200, 0.16) 101.86%
+  );
+  right: 0;
+}
+.box-two {
+  border-radius: 12px;
+border: 0.809px solid #2C2D47;
+background: linear-gradient(216deg, rgba(27, 28, 54, 0.16) 15.37%, rgba(0, 0, 11, 0.16) 99.03%);
+background-image: linear-gradient(
+    100deg,
+    rgba(0, 132, 255, 0.16) 7%,
+    rgba(255, 171, 144, 0.16) 48.55%,
+    rgba(253, 138, 200, 0.16) 101.86%
+  );
+width: 395.779px;
+height: 277.612px;
+top: 11%;
+left: 10%;
+}
+.box-three{
+  padding: 22px;
+  border-radius: 12px;
+background: #0B1023;
+box-shadow: 0px 0px 0px 4.047px rgba(255, 255, 255, 0.11);
+width: max-content;
+top: 38%;
+z-index: 1;
+}
+.box-four{
+  border-radius: 12px;
+border: 0.809px solid rgba(255, 255, 255, 0.17);
+background: #ED5959;
+padding: 9.71px;
+top: 71%;
+left: 5%;
+}
+.bar {
+  border-radius: 25.9px;
+  background: #CAD1E9;
+  height: 18.615px;
+}
+.bar-one {
+  width: 210.435px;
+  top: 20%;
+  left: 14%;
+}
+.bar-two {
+  width: 225.813px;
+  top: 41%;
+  left: 10%;
+}
+.bar-three, .bar-four {
+  width: 280.849px;
+  opacity: 0.4;
+  left: 11%;
+}
+.bar-three {
+  top: 49%;
+}
+.bar-four {
+  top: 57%;
+}
+.box-five{
+  border-radius: 12px;
+background: #0B1023;
+box-shadow: 0px 0px 0px 4.047px rgba(255, 255, 255, 0.11);
+padding: 26px;
+right: 4%;
+top: 71%;
+}
+.cursor{
+  top: 79%;
+  left: 18%;
+}
 /* pricing section */
 .pricing-card-container {
   gap: 24px;
@@ -423,26 +553,26 @@ img {
   );
   padding: 32px;
 }
-.pricing-title{
+.pricing-title {
   font-size: 32px;
   margin-bottom: 16px;
   line-height: 48px;
 }
-.price{
+.price {
   font-size: 88px;
 }
-.price-button{
-padding: 15px 137px;
+.price-button {
+  padding: 15px 137px;
 }
-.checkmark-container{
+.checkmark-container {
   padding: 20px 0px;
   gap: 16px;
-  border-bottom: 1px solid var(--neutral-015, rgba(255, 255, 255, 0.10));
+  border-bottom: 1px solid var(--neutral-015, rgba(255, 255, 255, 0.1));
 }
-.middle-price-padding{
+.middle-price-padding {
   padding: 48px 32px;
 }
-.price-svg{
+.price-svg {
   height: 58%;
   width: 90%;
 }
