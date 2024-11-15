@@ -326,7 +326,7 @@
         </div>
       </section>
       <!-- why choose us section -->
-       <section class="vector-container service-container">
+       <section class="vector-container service-container relative">
         <!-- top button -->
         <div class="flex justify-center items-center font-primary">
             <button
@@ -405,50 +405,151 @@
                 <!-- row card left -->
                 <div  class="row-card-left flex">
                     <div class="flex items-center justify-center flex-column">
-                      <div class="scroll-icon">
+                      <div class="scroll-icon second-cursor">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M18 12.5C18 12.5 13.5811 18.5 12 18.5C10.4188 18.5 6 12.5 6 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M18 5.50005C18 5.50005 13.5811 11.5 12 11.5C10.4188 11.5 6 5.5 6 5.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
                       </div>
-                        <div class="scroll-bar">
-
+                        <div class="second-scroll-bar">
                         </div>
                     </div>
                     <div>
                         <h2 class="font-primary font-medium row-card-title">Protect Personal information</h2>
                         <div class="flex gap-24 flex-column">
                             <div class="flex gap-16">
-                                <img src="./assests/icons/checkmark-one.svg" alt="checkmark" class="inherit-width">
+                                <img src="./assests/icons/purple-checkmark.svg" alt="checkmark" class="inherit-width">
                                 <p class="text-lg line-140">The first step involves identifying all places where your personal information might be present.</p>
                             </div>
                             <div class="flex gap-16">
-                                <img src="./assests/icons/checkmark-one.svg" alt="checkmark" class="inherit-width">
+                                <img src="./assests/icons/purple-checkmark.svg" alt="checkmark" class="inherit-width">
                                 <p class="text-lg line-140">Once you've identified where your information is held, the next step is to contact the administrators of this platform</p>
                             </div>
                             <div class="flex gap-16">
-                                <img src="./assests/icons/checkmark-one.svg" alt="checkmark" class="inherit-width">
+                                <img src="./assests/icons/purple-checkmark.svg" alt="checkmark" class="inherit-width">
                                 <p class="text-lg line-140">Removing personal information is not a one-time task but requires ongoing vigilance.</p>
                             </div>
                             <div class="flex gap-16">
-                                <img src="./assests/icons/checkmark-one.svg" alt="checkmark" class="inherit-width">
+                                <img src="./assests/icons/purple-checkmark.svg" alt="checkmark" class="inherit-width">
                                 <p class="text-lg line-140">The first step involves identifying all places where your personal information might be present.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- row card right -->
-                <div  class="relative row-card-right">
-                    <div class="box-one absolute"></div>
-                    <div class="box-two absolute"></div>
-                    <div class="box-three absolute"><img src="./assests/icons/image-01.svg" alt="gallary" class="inherit-width"></div>
-                    <div class="box-five absolute"><img src="./assests/icons/lock.svg" alt="lock"></div>
-                    <div class="box-four absolute"><p class="text-sm text-inter text-white font-inter">Delete</p></div>
-                    <div class="absolute bar bar-one"></div>
-                    <div class="absolute bar bar-two"></div>
-                    <div class="absolute bar bar-three"></div>
-                    <div class="absolute bar bar-four"></div>
-                    <div class="cursor absolute"><img src="./assests/icons/cursor.svg" alt="cursor"></div>
+                <div  class="flex items-center gap-16 justify-center row-card-right">
+                   <div class="flex flex-column gap-16">
+                    <!-- one logo container -->
+                    <div class="flex items-center icon-container row-card-icon-container">
+                        <div>
+                          <img
+                            class="inherit-width logo-container row-card-icon-padding"
+                            src="./assests/icons/blue-person.svg"
+                            alt="person"
+                          />
+                        </div>
+                        <div class="flex flex-column justify-between icon-title-gap">
+                          <p class="text-sm inter font-primary inline">
+                            Username
+                          </p>
+                          <p class="inter font-medium font-primary logo-title-two">
+                            +1 (456) 453-3456
+                          </p>
+                        </div>
+                      </div>
+                    <!-- one logo container -->
+                    <div class="flex items-center icon-container row-card-icon-container">
+                        <div>
+                          <img
+                            class="inherit-width logo-container row-card-icon-padding"
+                            src="./assests/icons/brown-message.svg"
+                            alt="message"
+                          />
+                        </div>
+                        <div class="flex flex-column justify-between icon-title-gap">
+                          <p class="text-sm inter font-primary inline">
+                            Email address
+                          </p>
+                          <p class="inter font-medium font-primary logo-title-two">
+                            +1 (456) 453-3456
+                          </p>
+                        </div>
+                      </div>
+                    <!-- one logo container -->
+                    <div class="flex items-center icon-container row-card-icon-container">
+                        <div>
+                          <img
+                            class="inherit-width logo-container row-card-icon-padding"
+                            src="./assests/icons/security-blue.svg"
+                            alt="security"
+                          />
+                        </div>
+                        <div class="flex flex-column justify-between icon-title-gap">
+                          <p class="text-sm inter font-primary inline">
+                            Password
+                          </p>
+                          <p class="inter font-medium font-primary logo-title-two">
+                            Kas3345-r32
+                          </p>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="flex flex-column gap-16">
+                    <!-- one logo container -->
+                    <div class="flex items-center icon-container row-card-icon-container">
+                        <div>
+                          <img
+                            class="inherit-width logo-container row-card-icon-padding"
+                            src="./assests/icons/big-phone.svg"
+                            alt="phone"
+                          />
+                        </div>
+                        <div class="flex flex-column justify-between icon-title-gap">
+                          <p class="text-sm inter font-primary inline">
+                            Phone numbers
+                          </p>
+                          <p class="inter font-medium font-primary logo-title-two">
+                            +1 (456) 453-3456
+                          </p>
+                        </div>
+                      </div>
+                    <!-- one logo container -->
+                    <div class="flex items-center icon-container row-card-icon-container">
+                        <div>
+                          <img
+                            class="inherit-width logo-container row-card-icon-padding"
+                            src="./assests/icons/big-credit.svg"
+                            alt="credit-card"
+                          />
+                        </div>
+                        <div class="flex flex-column justify-between icon-title-gap">
+                          <p class="text-sm inter font-primary inline">
+                            Credit card
+                          </p>
+                          <p class="inter font-medium font-primary logo-title-two">
+                            +1 (456) 453-3456
+                          </p>
+                        </div>
+                      </div>
+                    <!-- one logo container -->
+                    <div class="flex items-center icon-container row-card-icon-container">
+                        <div>
+                          <img
+                            class="inherit-width logo-container row-card-icon-padding"
+                            src="./assests/icons/green-lock.svg"
+                            alt="lock"
+                          />
+                        </div>
+                        <div class="flex flex-column justify-between icon-title-gap">
+                          <p class="text-sm inter font-primary inline">
+                            One-time passcode
+                          </p>
+                          <p class="inter font-medium font-primary logo-title-two">
+                            Kas3345-r32
+                          </p>
+                        </div>
+                      </div>
+                   </div>
                 </div>
             </div>
             <!-- card no 3 -->
@@ -456,13 +557,12 @@
                 <!-- row card left -->
                 <div  class="row-card-left flex">
                     <div class="flex items-center justify-center flex-column">
-                      <div class="scroll-icon">
+                      <div class="scroll-icon-three scroll-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M18 12.5C18 12.5 13.5811 18.5 12 18.5C10.4188 18.5 6 12.5 6 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M18 5.50005C18 5.50005 13.5811 11.5 12 11.5C10.4188 11.5 6 5.5 6 5.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 14.5C5 14.5 6.5 14.5 8.5 18C8.5 18 14.0588 8.83333 19 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
                       </div>
-                        <div class="scroll-bar">
+                        <div class="scroll-bar-green">
 
                         </div>
                     </div>
@@ -470,19 +570,19 @@
                         <h2 class="font-primary font-medium row-card-title">Protect Personal information</h2>
                         <div class="flex gap-24 flex-column">
                             <div class="flex gap-16">
-                                <img src="./assests/icons/checkmark-one.svg" alt="checkmark" class="inherit-width">
+                                <img src="./assests/icons/checkmark-gree.svg" alt="checkmark" class="inherit-width">
                                 <p class="text-lg line-140">The first step involves identifying all places where your personal information might be present.</p>
                             </div>
                             <div class="flex gap-16">
-                                <img src="./assests/icons/checkmark-one.svg" alt="checkmark" class="inherit-width">
+                                <img src="./assests/icons/checkmark-gree.svg" alt="checkmark" class="inherit-width">
                                 <p class="text-lg line-140">Once you've identified where your information is held, the next step is to contact the administrators of this platform</p>
                             </div>
                             <div class="flex gap-16">
-                                <img src="./assests/icons/checkmark-one.svg" alt="checkmark" class="inherit-width">
+                                <img src="./assests/icons/checkmark-gree.svg" alt="checkmark" class="inherit-width">
                                 <p class="text-lg line-140">Removing personal information is not a one-time task but requires ongoing vigilance.</p>
                             </div>
                             <div class="flex gap-16">
-                                <img src="./assests/icons/checkmark-one.svg" alt="checkmark" class="inherit-width">
+                                <img src="./assests/icons/checkmark-gree.svg" alt="checkmark" class="inherit-width">
                                 <p class="text-lg line-140">The first step involves identifying all places where your personal information might be present.</p>
                             </div>
                         </div>
@@ -490,20 +590,52 @@
                 </div>
                 <!-- row card right -->
                 <div  class="relative row-card-right">
-                    <div class="box-one absolute"></div>
-                    <div class="box-two absolute"></div>
-                    <div class="box-three absolute"><img src="./assests/icons/image-01.svg" alt="gallary" class="inherit-width"></div>
-                    <div class="box-five absolute"><img src="./assests/icons/lock.svg" alt="lock"></div>
-                    <div class="box-four absolute"><p class="text-sm text-inter text-white font-inter">Delete</p></div>
-                    <div class="absolute bar bar-one"></div>
-                    <div class="absolute bar bar-two"></div>
-                    <div class="absolute bar bar-three"></div>
-                    <div class="absolute bar bar-four"></div>
-                    <div class="cursor absolute"><img src="./assests/icons/cursor.svg" alt="cursor"></div>
+                    <div class="absolute big-blue-svg">
+                        <img src="./assests/icons/big-blue-lock.svg" alt="">
+                    </div>
+                    <div class="absolute contact-svg">
+                        <div class="flex items-center icon-container contact-svg-icon-container">
+                            <div>
+                              <img
+                                class="inherit-width logo-container row-card-icon-padding"
+                                src="./assests/icons/blue-person.svg"
+                                alt="person"
+                              />
+                            </div>
+                            <div class="flex flex-column justify-between icon-title-gap">
+                              <p class="text-sm inter font-primary inline">
+                                Username
+                              </p>
+                              <p class="inter font-medium font-primary logo-title-two">
+                                tufayel nija
+                              </p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="absolute email-svg">
+                        <div class="flex items-center icon-container email-svg-icon-container">
+                            <div>
+                              <img
+                                class="inherit-width logo-container row-card-icon-padding"
+                                src="./assests/icons/brown-message.svg"
+                                alt="message"
+                              />
+                            </div>
+                            <div class="flex flex-column justify-between icon-title-gap">
+                              <p class="text-sm inter font-primary inline">
+                                Email address
+                              </p>
+                              <p class="inter font-medium font-primary logo-title-two">
+                                nija@gmail.com
+                              </p>
+                            </div>
+                          </div>
+                    </div>
                 </div>
             </div>
 
            </div>
+           <div class="svg-container-two why-choose-us-svg"></div>
        </section>
       <!-- pricing section -->
       <section class="vector-container service-container relative">

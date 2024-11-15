@@ -423,7 +423,7 @@ img {
   gap: 20px;
   width: 55%;
 }
-.row-card-right{
+.row-card-right {
   width: 43%;
 }
 .scroll-bar {
@@ -437,8 +437,7 @@ img {
   height: 100%;
   backdrop-filter: blur(8px);
   box-shadow: 0px 4px 12px rgba(54, 115, 255, 0.5) inset,
-    /* Stronger inner blue shadow */ 0px 0px 15px rgba(72, 145, 255, 0.7),
-    /* Vibrant outer blue shadow */ 0px 0px 20px rgba(99, 181, 255, 0.5);
+    0px 0px 15px rgba(72, 145, 255, 0.7), 0px 0px 20px rgba(99, 181, 255, 0.5);
 }
 .scroll-icon {
   background: #1e21e9;
@@ -465,39 +464,43 @@ img {
 }
 .box-two {
   border-radius: 12px;
-border: 0.809px solid #2C2D47;
-background: linear-gradient(216deg, rgba(27, 28, 54, 0.16) 15.37%, rgba(0, 0, 11, 0.16) 99.03%);
-background-image: linear-gradient(
+  border: 0.809px solid #2c2d47;
+  background: linear-gradient(
+    216deg,
+    rgba(27, 28, 54, 0.16) 15.37%,
+    rgba(0, 0, 11, 0.16) 99.03%
+  );
+  background-image: linear-gradient(
     100deg,
     rgba(0, 132, 255, 0.16) 7%,
     rgba(255, 171, 144, 0.16) 48.55%,
     rgba(253, 138, 200, 0.16) 101.86%
   );
-width: 395.779px;
-height: 277.612px;
-top: 11%;
-left: 10%;
+  width: 395.779px;
+  height: 277.612px;
+  top: 11%;
+  left: 10%;
 }
-.box-three{
+.box-three {
   padding: 22px;
   border-radius: 12px;
-background: #0B1023;
-box-shadow: 0px 0px 0px 4.047px rgba(255, 255, 255, 0.11);
-width: max-content;
-top: 38%;
-z-index: 1;
+  background: #0b1023;
+  box-shadow: 0px 0px 0px 4.047px rgba(255, 255, 255, 0.11);
+  width: max-content;
+  top: 38%;
+  z-index: 1;
 }
-.box-four{
+.box-four {
   border-radius: 12px;
-border: 0.809px solid rgba(255, 255, 255, 0.17);
-background: #ED5959;
-padding: 9.71px;
-top: 71%;
-left: 5%;
+  border: 0.809px solid rgba(255, 255, 255, 0.17);
+  background: #ed5959;
+  padding: 9.71px;
+  top: 71%;
+  left: 5%;
 }
 .bar {
   border-radius: 25.9px;
-  background: #CAD1E9;
+  background: #cad1e9;
   height: 18.615px;
 }
 .bar-one {
@@ -510,7 +513,8 @@ left: 5%;
   top: 41%;
   left: 10%;
 }
-.bar-three, .bar-four {
+.bar-three,
+.bar-four {
   width: 280.849px;
   opacity: 0.4;
   left: 11%;
@@ -521,17 +525,94 @@ left: 5%;
 .bar-four {
   top: 57%;
 }
-.box-five{
+.box-five {
   border-radius: 12px;
-background: #0B1023;
-box-shadow: 0px 0px 0px 4.047px rgba(255, 255, 255, 0.11);
-padding: 26px;
-right: 4%;
-top: 71%;
+  background: #0b1023;
+  box-shadow: 0px 0px 0px 4.047px rgba(255, 255, 255, 0.11);
+  padding: 26px;
+  right: 4%;
+  top: 71%;
 }
-.cursor{
+.cursor {
   top: 79%;
   left: 18%;
+}
+/* row 2nd card */
+.second-cursor {
+  background-color: #7950ff;
+}
+.second-scroll-bar {
+  width: 2.4px;
+  background-image: linear-gradient(
+    90deg,
+    #7950ff 13.51%,
+    rgba(121, 80, 255, 0) 89.18%,
+    rgba(121, 80, 255, 0) 89.18%
+  );
+  height: 100%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 4px 12px rgba(121, 80, 255, 0.5) inset,
+    0px 0px 15px rgba(121, 80, 255, 0.7), 0px 0px 20px rgba(121, 80, 255, 0.5);
+}
+.row-card-icon-container {
+  padding: 15px 17px 15px 16px;
+  border-radius: 20px;
+}
+.row-card-icon-padding {
+  padding: 4px;
+}
+/* price card three */
+.scroll-icon-three {
+  background-color: #098709;
+}
+.scroll-bar-green {
+  width: 2.4px;
+  background-image: linear-gradient(
+    90deg,
+    #098709 13.51%,
+    rgba(9, 135, 9, 0) 89.18%,
+    rgba(9, 135, 9, 0) 89.18%
+  );
+  height: 100%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 4px 12px rgba(9, 135, 9, 0.5) inset,
+    0px 0px 15px rgba(9, 160, 9, 0.7), 0px 0px 20px rgba(9, 190, 9, 0.5);
+}
+.big-blue-svg {
+  top: 4%;
+  right: 7%;
+}
+.email-svg {
+  top: 39%;
+  left: -5%;
+  border-radius: 20px;
+  background: linear-gradient(
+    137deg,
+    rgba(27, 28, 54, 0.16) 23.98%,
+    rgba(112, 113, 122, 0.16) 65.73%
+  );
+}
+.contact-svg{
+  top: 71%;
+  left: 15%;
+  border-radius: 20px;
+  background: linear-gradient(
+    137deg,
+    rgba(27, 28, 54, 0.16) 23.98%,
+    rgba(112, 113, 122, 0.16) 65.73%
+  );
+}
+.email-svg-icon-container{
+  padding: 11px 43px 11px 12px;
+  border-radius: 20px;
+}
+.contact-svg-icon-container{
+  padding: 11px 80px 11px 12px;
+  border-radius: 20px;
+}
+.why-choose-us-svg{
+  z-index: -2;
+  height: 30%;
 }
 /* pricing section */
 .pricing-card-container {
