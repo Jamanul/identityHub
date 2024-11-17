@@ -392,8 +392,8 @@ img {
   padding: 10px 6px;
 }
 .card-gradiant {
-  width: 242px;
-  height: 242px;
+  width: 60%;
+  height: 60%;
   background: linear-gradient(128deg, #0f1eff, #0064ff);
   filter: blur(60px);
   opacity: 0.4;
@@ -640,6 +640,7 @@ img {
     )
   );
   padding: 32px;
+  width: 100%;
 }
 .pricing-title {
   font-size: 32px;
@@ -650,7 +651,8 @@ img {
   font-size: 88px;
 }
 .price-button {
-  padding: 15px 136px;
+  padding: 15px 0px;
+  width: 100%;
 }
 .checkmark-container {
   padding: 20px 0px;
@@ -733,8 +735,8 @@ img {
 }
 .buttons {
   top: 60%;
-  width: 103.5%;
-  left: -20px;
+  width: 100%;
+  /* left: -20px; */
 }
 .dots {
   margin: 0px;
@@ -835,8 +837,79 @@ img {
     transform: rotate(360deg);
   }
 }
-/* *,
+*,
 ::after,
 ::before {
   border: 1px solid red;
-} */
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .vector-container {
+    max-width: 90%;
+  }
+  .service-container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+  .text-xxxl {
+    font-size: 48px;
+  }
+  .title-line {
+    right: 28%;
+    width: 22%;
+  }
+  .text-xl {
+    font-size: 20px;
+  }
+  .title-container {
+    padding: 5px 28px;
+  }
+  .logo-image-div {
+    width: 40%;
+  }
+  .card {
+    padding: 8px;
+    transform: scale(.7);
+    top: -5%;
+}
+.scale-down{
+  scale: 0.9;
+}
+.text-lg{
+  font-size: 16px;
+}
+.card-dsc {
+  line-height: 140%;
+  margin: 10px 0px ;
+}
+.card-gradiant{
+  height: 50%;
+  width: 40%;
+}
+.join-us-contaier{
+  padding-top: 0px;
+}
+.join-us-line {
+  left: 33%;
+}
+.pricing-title {
+  font-size: 24px;
+}
+.price{
+  font-size: 44px;
+}
+.text-xxl{
+  font-size: 30px;
+}
+.price-button {
+  padding: 7px 0px;
+}
+.testimonial-div{
+  max-width: 81.7vw;
+}
+}
