@@ -829,6 +829,9 @@ img {
   border-radius: 100%;
   background-color: #1b1530;
 }
+.responsive-block {
+  display: none;
+}
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -837,18 +840,241 @@ img {
     transform: rotate(360deg);
   }
 }
-*,
+/* *,
 ::after,
 ::before {
   border: 1px solid red;
-}
+} */
 @media only screen and (max-width: 600px) {
+  .vector-container {
+    max-width: 95%;
+  }
+  .nav {
+    margin: 10px 0px;
+  }
+  .responsive-hide {
+    display: none;
+  }
+  .text-xl {
+    font-size: 14px;
+  }
+  .text-xxxl {
+    font-size: 24px;
+  }
+  .title-container {
+    padding: 0px;
+  }
+  .responsive-block {
+    display: block;
+  }
+  .title-line {
+    top: 14%;
+    right: 3%;
+    width: 30%;
+  }
+  .hero-dsc {
+    line-height: 100%;
+    margin-bottom: 16px;
+    padding: 0px 16px;
+  }
+  .hero-logo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-logo-sides {
+    gap: 16px;
+  }
+  .logo-image-div {
+    width: 50%;
+  }
+  .hero-button-container {
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.service-container {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+.icon-container{
+  padding: 4px;
+}
+.primary-button{
+  padding: 4px 20px;
+}
+.button-glass{
+  padding: 4px 20px;
+}
+.svg-container-two{
+  width: 80%;
+}
+.first {
+  height: 50%;
+  top: 29%;
+}
+.fifth {
+  height: 12%;
+  top: 48%;
+}
+.fourth {
+  height: 23%;
+  top: 42%;
+}
+.third {
+  height: 32%;
+        top: 37%;
+}
+.second {
+  height: 41%;
+  top: 33%;
+}
+.join-us-svg {
+  left: 12%;
+}
+.text-xxl {
+  font-size: 24px;
+}
+.span-block {
+  display: inline;
+}
+.service-card{
+  flex-direction: column;
+  gap: 8px;
+}
+.card{
+  scale: 0.9;
+  padding: 0px;
+}
+.card-title{
+  font-size: 24px;
+  margin-top: 6px;
+}
+.text-lg{
+  font-size: 16px;
+}
+.card-gradiant {
+  height: 50%;
+  width: 40%;
+  top: 18%;
+  left: 40%;
+}
+.row-card{
+  padding: 16px;
+}
+.row-card {
+  flex-direction: column;
+  gap: 24px;
+}
+.row-card-left {
+  width: 100%;
+  gap: 8px;
+}
+.row-card-right {
+  width: 100%;
+  height: 416px;
+  flex-direction: column;
+  scale: 0.9;
+}
+.row-card-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.gap-16{
+  gap: 8px;
+}
+.responsive-scale {
+  scale: 0.7;
+}
+.box-one{
+  right: -72px;
+}
+.box-two{
+  left: -28%;;
+}
+.box-three{
+  left: -24%;
+}
+.box-four{
+  left: -13%;
+}
+.cursor{
+  left: 8%;
+}
+.choose-us-circles {
+  height: 3%;
+  top: 35%;
+}
+.pricing-card-container{
+  flex-direction: column;
+  padding: 0;
+}
+.price-button{
+  padding: 10px 0px;
+}
+.price{
+  font-size: 44px;
+}
+.pricing-card{
+  width: -webkit-fill-available;;
+}
+
+.testimonial-div{
+  width: 81.7vw;
+  padding: 12px 16px;
+}
+.testimonial-inner-div{
+  flex-direction: column;
+}
+.inherit-width{
+  width: fit-content;
+}
+.testimonial-dsc{
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.slider{
+  height: 500px;
+}
+.dots {
+  left: 30%;
+  bottom: 13%;
+}
+.footer-top {
+  flex-direction: column;
+}
+.li-padding{
+  padding: 0px 4px;
+  font-size: 10px;
+}
+.footer-container{
+  padding: 16px 8px;
+}
+.footer-bottom{
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+.join-us-contaier{
+  padding-top: 0px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+.join-us-line {
+  width: 50%;
+  left: 24%;
+  top: 28%;
+}
+.join-us-dsc{
+  font-size: 14px;
+}
 }
 @media only screen and (min-width: 601px) and (max-width: 767px) {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .vector-container {
     max-width: 90%;
+  }
+  .service-container {
+    padding-top: 100px;
+    padding-bottom: 0px;
   }
   .nav {
     margin: 20px 0px;
@@ -862,6 +1088,9 @@ img {
   .primary-button {
     padding: 06px 16px;
   }
+  .button-glass {
+    padding: 06px 16px;
+  }
   .title-container {
     padding: 20px 40px;
   }
@@ -869,7 +1098,7 @@ img {
     font-size: 40px;
   }
   .title-line {
-    top: 22.5%;
+    top: 16%;
     right: 20%;
     width: 25%;
   }
@@ -919,6 +1148,12 @@ img {
     margin-top: 12px;
     font-size: 18px;
   }
+  .card-gradiant {
+    height: 50%;
+    width: 40%;
+    top: 18%;
+    left: 40%;
+  }
   .text-lg {
     font-size: 14px;
   }
@@ -943,9 +1178,7 @@ img {
     padding: 0px 16px;
   }
   .join-us-contaier {
-    margin-top: 23px;
     padding-top: 0px;
-    margin-bottom: 120px;
   }
   .pricing-card-container {
     padding: 0px;
@@ -960,9 +1193,19 @@ img {
     padding: 32px 32px;
   }
   .price-button {
-    padding: 1px 0px;
+    padding: 1px 1px;
     width: 100%;
   }
+  .svg-container-two {
+    width: 65%;
+  }
+  .testimonial-div {
+    max-width: 81.7vw;
+  }
+  .dots {
+    left: 41%;
+  }
+
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .vector-container {
