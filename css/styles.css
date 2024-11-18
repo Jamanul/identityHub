@@ -366,10 +366,58 @@ img {
   line-height: 140%;
   margin: 16px 0px 40px 0px;
 }
-.card {
-  padding: 32px;
-  top: 0px;
+.service-card{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3,1fr);
 }
+.card {
+  position: relative;
+  padding: 32px;
+  border-radius: 32px 64px 32px 32px;
+  background: #0c0a14;
+  z-index: 1;
+  overflow: hidden; /* Ensure pseudo-element stays within the card boundaries */
+  transition: transform 0.3s ease; /* Optional scaling on hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Optional zoom effect */
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(45deg,#090EDBA8, #E73DC4A8);/* Brighter colors for the gradient */
+  padding: 2px;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  background-size: 200% 200%; /* For a sweeping effect */
+  transition: background 0.5s ease; /* Smooth transition for hover effect */
+}
+
+.card:hover::after {
+  animation: light-sweep 3s infinite; /* Slower animation */
+}
+
+@keyframes light-sweep {
+  0% {
+    background-position: 100% 200%; /* Start from left-bottom */
+  }
+  100% {
+    background-position: 0% 200%; /* Move to right-bottom */
+  }
+}
+
 .card-logo-contaier {
   border-radius: 13px;
   background: var(
@@ -401,6 +449,7 @@ img {
   border-radius: 121px;
   top: 85px;
   left: 128px;
+  z-index: 1;
 }
 /* why choose us section */
 .row-card-container {
@@ -668,7 +717,7 @@ img {
 }
 .earth-svg {
   top: -3%;
-  right: -21%;
+  right: 0%;
 }
 .planet-red {
   top: 3%;
@@ -676,7 +725,7 @@ img {
 }
 .planet-purple {
   top: 10%;
-  right: -2%;
+  right: 0%;
 }
 /* testimonial */
 .testimonial-button {
@@ -735,8 +784,8 @@ img {
 }
 .buttons {
   top: 60%;
-  width: 100%;
-  /* left: -20px; */
+  width: 103.5%;
+  left: -20px;
 }
 .dots {
   margin: 0px;
@@ -877,6 +926,9 @@ img {
     margin-bottom: 16px;
     padding: 0px 16px;
   }
+  .responsive-padding-fix{
+    padding: 0px 4px;
+  }
   .hero-logo-container {
     flex-direction: column;
     align-items: center;
@@ -897,12 +949,6 @@ img {
 }
 .icon-container{
   padding: 4px;
-}
-.primary-button{
-  padding: 4px 20px;
-}
-.button-glass{
-  padding: 4px 20px;
 }
 .svg-container-two{
   width: 80%;
@@ -937,12 +983,11 @@ img {
   display: inline;
 }
 .service-card{
-  flex-direction: column;
+  grid-template-columns: repeat(1,1fr);
   gap: 8px;
 }
 .card{
-  scale: 0.9;
-  padding: 0px;
+  padding: 16px;
 }
 .card-title{
   font-size: 24px;
@@ -1016,9 +1061,11 @@ img {
 .pricing-card{
   width: -webkit-fill-available;;
 }
-
+.button-glass{
+  border: #090edb 1px solid;
+}
 .testimonial-div{
-  width: 81.7vw;
+  width: 85.7vw;
   padding: 12px 16px;
 }
 .testimonial-inner-div{
@@ -1036,7 +1083,11 @@ img {
 }
 .dots {
   left: 30%;
-  bottom: 13%;
+  top: 87%;
+}
+.buttons{
+  width: 100%;
+  left: 0px;
 }
 .footer-top {
   flex-direction: column;
@@ -1058,23 +1109,28 @@ img {
   margin-bottom: 100px;
 }
 .join-us-line {
-  width: 50%;
-  left: 24%;
-  top: 28%;
+  width: 40%;
+  left: 30%;
+  top: 34%;
 }
 .join-us-dsc{
   font-size: 14px;
+  margin: 12px 0px 8px 0px;
 }
 }
-@media only screen and (min-width: 601px) and (max-width: 767px) {
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 601px) and (max-width: 767px)  {
   .vector-container {
     max-width: 90%;
   }
   .service-container {
     padding-top: 100px;
     padding-bottom: 0px;
+  }
+  .responsive-hide-tab,.responsive-hide {
+    display: none;
+  }
+  .responsive-block{
+    display: block;
   }
   .nav {
     margin: 20px 0px;
@@ -1090,6 +1146,7 @@ img {
   }
   .button-glass {
     padding: 06px 16px;
+    border:#090edb 1px solid
   }
   .title-container {
     padding: 20px 40px;
@@ -1108,6 +1165,166 @@ img {
   }
   .hero-logo-sides {
     flex-direction: row;
+    gap: 24px;
+  }
+  .logo-image-div {
+    width: 50%;
+  }
+  .first {
+    height: 89%;
+    top: 9%;
+  }
+  .fifth {
+    height: 22%;
+    top: 42%;
+  }
+  .fourth {
+    height: 38%;
+    top: 35%;
+  }
+  .third {
+    height: 56%;
+    top: 26%;
+  }
+  .second {
+    height: 73%;
+    top: 17%;
+  }
+  .service-card{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .card {
+    padding: 64px 32px;
+  }
+  .card-dsc {
+    line-height: 100%;
+    margin: 6px 0px;
+  }
+  .card-title {
+    margin-top: 12px;
+    font-size: 18px;
+  }
+  .card-gradiant {
+    height: 50%;
+    width: 40%;
+    top: 18%;
+    left: 40%;
+  }
+  .text-lg {
+    font-size: 14px;
+  }
+  .explore-padding {
+    padding: 3px 2px;
+  }
+  .row-card {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .row-card-left {
+    width: 100%;
+  }
+  .row-card-right {
+    width: 100%;
+    height: 400px;
+  }
+  .choose-us-circles {
+    height: 7%;
+  }
+  .li-padding {
+    padding: 0px 8px;
+  }
+  .text-sm{
+    font-size: 12px;
+  }
+  .join-us-contaier {
+    padding-top: 0px;
+  }
+  .buttons {
+    top: 65%;
+    width: 100%;
+    left: 0px;
+}
+  .pricing-card-container {
+    padding: 0px;
+    flex-direction: column;
+  }
+  .pricing-title {
+    font-size: 22px;
+  }
+  .price {
+    font-size: 40px;
+  }
+  .middle-price-padding {
+    padding: 32px 32px;
+  }
+  .price-button {
+    padding: 8px 1px;
+    width: 100%;
+  }
+  .pricing-card{
+    width: 90%;
+  }
+  .svg-container-two {
+    width: 65%;
+  }
+  .testimonial-div {
+    max-width: 80vw;
+  }
+  .dots {
+    left: 41%;
+  }
+  .join-us-line {
+    left: 22%;
+}
+.slider {
+  height: 442px;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .vector-container {
+    max-width: 90%;
+  }
+  .service-container {
+    padding-top: 100px;
+    padding-bottom: 0px;
+  }
+  .responsive-hide-tab {
+    display: none;
+  }
+  .nav {
+    margin: 20px 0px;
+  }
+  .text-xl {
+    font-size: 18px;
+  }
+  .text-responsive {
+    font-size: 12px;
+  }
+  .primary-button {
+    padding: 06px 16px;
+  }
+  .button-glass {
+    padding: 06px 16px;
+    border:#090edb 1px solid
+  }
+  .title-container {
+    padding: 20px 40px;
+  }
+  .text-xxxl {
+    font-size: 40px;
+  }
+  .title-line {
+    top: 16%;
+    right: 20%;
+    width: 25%;
+  }
+  .hero-logo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-logo-sides {
+    flex-direction: row;
+    gap: 24px;
   }
   .logo-image-div {
     width: 50%;
@@ -1133,12 +1350,7 @@ img {
     top: 17%;
   }
   .card {
-    padding: 0px;
-    transform: scale(0.8);
-    top: 0;
-  }
-  .scale-down {
-    scale: 0.9;
+    padding: 16px;
   }
   .card-dsc {
     line-height: 100%;
@@ -1180,6 +1392,11 @@ img {
   .join-us-contaier {
     padding-top: 0px;
   }
+  .buttons {
+    top: 65%;
+    width: 100%;
+    left: 0px;
+}
   .pricing-card-container {
     padding: 0px;
   }
@@ -1200,11 +1417,14 @@ img {
     width: 65%;
   }
   .testimonial-div {
-    max-width: 81.7vw;
+    max-width: 80vw;
   }
   .dots {
     left: 41%;
   }
+  .join-us-line {
+    left: 28%;
+}
 
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1233,8 +1453,6 @@ img {
   }
   .card {
     padding: 8px;
-    transform: scale(0.7);
-    top: -5%;
   }
   .scale-down {
     scale: 0.9;
