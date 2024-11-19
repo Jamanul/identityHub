@@ -3,6 +3,12 @@
   margin: 0px;
   padding: 0px;
 }
+button{
+  cursor: pointer; 
+}
+li{
+  cursor: pointer;
+}
 :root {
   --font-size-base: 16px;
   --font-weight-normal: 400;
@@ -113,6 +119,49 @@ img {
 .gap-16 {
   gap: 16px;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
+/* text gradiant effect */
+.text-gradient {
+  background: linear-gradient(90deg, #CAD1E9,#4349FF 73.37%,#F33CC0 13.43%);
+  transition: background-position 1s ease-in-out; 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size:1000% 100%;
+  background-position: left;
+}
+.text-gradient-two{
+  background: linear-gradient(88deg, #090EDB -15.78%, #E73DC4 102.06%);
+  background-size:160% 100%;
+  transition: background-position 1s ease-in-out; 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: left;
+}
+.text-gradient:hover {
+ background-position: right;
+}
+/* border */
+.text-hover-border {
+  position: relative;
+  text-decoration: none; 
+}
+.text-hover-border::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0; 
+  background: linear-gradient(90deg, var(--font-color-text) 0%, var(--font-color-text) 100%);
+  transition: width 0.5s ease;
+}
+.text-hover-border:hover::after {
+  width: 100%;
+}
 /* navbar */
 .nav {
   margin: 20px 58.5px;
@@ -128,6 +177,7 @@ img {
 }
 .nav-left {
   gap: 8px;
+  cursor: pointer;
 }
 .nav-middle {
   gap: 24px;
@@ -179,11 +229,18 @@ img {
 }
 .hero-title {
   line-height: 120%;
-  background: linear-gradient(180deg, #f33cc0 13.43%, #4349ff 73.37%);
+  background: linear-gradient(180deg, #F33CC0 13.43%, #4349FF 73.37%, #F33CC0 13.43%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 24px;
+  transition: background-position 0.8s ease-in-out;
+  background-size: 100% 164%;
+  background-position: top;
+}
+
+.hero-title:hover {
+  background-position: bottom; 
 }
 .hero-dsc {
   line-height: 140%;
@@ -191,8 +248,23 @@ img {
   padding: 0px 60px;
 }
 .title-line {
-  top: 21%;
+  top: 20%;
   right: 24%;
+  animation: slideAnimation 4s ease-in-out infinite;
+}
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0); 
+  }
+  25% {
+    transform: translateX(-5%); 
+  }
+  50% {
+    transform: translateX(17%); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
 }
 .button-secondary {
   background: linear-gradient(87deg, #090edb 8.8%, #da24bb 84.38%);
@@ -237,6 +309,55 @@ img {
 .title-container {
   padding: 68px 168px 100px 168px;
 }
+.logo-image-div{
+  margin-top: 60px;
+  margin-bottom: 40px;
+  width: 40%;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) translate(250px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(250px) rotate(-360deg);
+  }
+}
+
+.one, .two, .three, .four {
+  animation: spin 10s linear infinite;
+  transform-origin: center center;
+}
+
+.one {
+  transform: rotate(0deg) translate(250px) rotate(0deg);
+}
+
+.two {
+  transform: rotate(90deg) translate(250px) rotate(-90deg);
+}
+
+.three {
+  transform: rotate(180deg) translate(250px) rotate(-180deg);
+}
+
+.four {
+  transform: rotate(270deg) translate(250px) rotate(-270deg);
+}
+.one {
+  animation-delay: 0s;
+}
+
+.two {
+  animation-delay: -2.5s;
+}
+
+.three {
+  animation-delay: -5s;
+}
+
+.four {
+  animation-delay: -7.5s;
+}
 .padding-fix {
   padding: 2px;
 }
@@ -249,7 +370,6 @@ img {
 .planet {
   position: absolute;
   border-radius: 100%;
-  animation: spin 10s linear infinite;
 }
 /* Specific sizes and positions for backgrounds */
 .first {
@@ -341,7 +461,7 @@ img {
     ),
     radial-gradient(circle at 30% 10%, rgba(242, 55, 31, 0.5), transparent 60%),
     radial-gradient(circle at 50% 20%, rgba(238, 70, 211, 0.5), transparent 60%),
-    radial-gradient(circle at 40% 90%, rgba(0, 0, 255, 0.5), transparent 60%); /* Even more bluish Cyan */
+    radial-gradient(circle at 40% 90%, rgba(0, 0, 255, 0.5), transparent 60%); 
   background-blend-mode: color-dodge;
   mix-blend-mode: color-dodge;
   filter: blur(198px);
@@ -377,12 +497,8 @@ img {
   border-radius: 32px 64px 32px 32px;
   background: #0c0a14;
   z-index: 1;
-  overflow: hidden; /* Ensure pseudo-element stays within the card boundaries */
-  transition: transform 0.3s ease; /* Optional scaling on hover */
-}
-
-.card:hover {
-  transform: scale(1.05); /* Optional zoom effect */
+  overflow: hidden; 
+  transition: transform 0.3s ease; 
 }
 
 .card::after {
@@ -394,28 +510,19 @@ img {
   bottom: 0;
   z-index: -1;
   border-radius: inherit;
-  background: linear-gradient(45deg,#090EDBA8, #E73DC4A8);/* Brighter colors for the gradient */
+  background: linear-gradient(45deg,#090EDBA8, #E73DC4A8);
   padding: 2px;
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  background-size: 200% 200%; /* For a sweeping effect */
-  transition: background 0.5s ease; /* Smooth transition for hover effect */
+  background-size: 200% 200%; 
+  transition: background 0.5s ease; 
 }
 
 .card:hover::after {
-  animation: light-sweep 3s infinite; /* Slower animation */
-}
-
-@keyframes light-sweep {
-  0% {
-    background-position: 100% 200%; /* Start from left-bottom */
-  }
-  100% {
-    background-position: 0% 200%; /* Move to right-bottom */
-  }
+  animation: light-sweep 1.5s infinite; 
 }
 
 .card-logo-contaier {
@@ -437,19 +544,24 @@ img {
   margin: 10px 0px 24px 0px;
 }
 .explore-padding {
-  padding: 10px 6px;
+  margin: 10px 6px;
 }
 .card-gradiant {
-  width: 60%;
-  height: 60%;
+  width: 20%;
+  height: 20%;
   background: linear-gradient(128deg, #0f1eff, #0064ff);
   filter: blur(60px);
   opacity: 0.4;
   mix-blend-mode: color-dodge;
   border-radius: 121px;
   top: 85px;
-  left: 128px;
+  left: 168px;
   z-index: 1;
+  transition: width 0.4s ease, height 0.4s ease; 
+}
+.card:hover .card-gradiant{
+  width: 45%;
+  height: 45%;
 }
 /* why choose us section */
 .row-card-container {
@@ -610,6 +722,20 @@ img {
 .row-card-icon-padding {
   padding: 4px;
 }
+.bounce-animation{
+  animation: bounce-vertical 2s infinite;
+}
+.bounce-animation-two{
+  animation: bounce-vertical 6s infinite;
+}
+@keyframes bounce-vertical {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
 /* price card three */
 .scroll-icon-three {
   background-color: #098709;
@@ -718,6 +844,15 @@ img {
 .earth-svg {
   top: -3%;
   right: 0%;
+  animation: spinAnimation 10s linear infinite;
+}
+@keyframes spinAnimation {
+  0% {
+    transform: rotate(0deg); 
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
 }
 .planet-red {
   top: 3%;
@@ -808,6 +943,18 @@ img {
   padding: 6px;
 }
 /* join us dsc */
+.join-us-title{
+  background: linear-gradient(180deg, #fff,#4349FF 73.37%,#F33CC0 13.43%);
+  transition: background-position 1s ease-in-out; 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size:100% 1000%;
+  background-position: top;
+}
+.join-us-title:hover{
+  background-position: bottom;
+}
 .join-us-dsc {
   margin: 24px 0px 32px 0px;
   line-height: 160%;
@@ -819,6 +966,7 @@ img {
 }
 .join-us-line {
   left: 38%;
+  animation: slideAnimation 4s ease-in-out infinite;
 }
 .join-us-svg {
   width: 60%;
@@ -881,12 +1029,12 @@ img {
 .responsive-block {
   display: none;
 }
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+@keyframes light-sweep {
+  0% {
+    background-position: 100% 200%; 
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-position: 0% 200%; 
   }
 }
 /* *,
@@ -938,7 +1086,36 @@ img {
   }
   .logo-image-div {
     width: 50%;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg) translate(150px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(150px) rotate(-360deg);
+    }
+  }
+  .one {
+    transform: rotate(0deg) translate(150px) rotate(0deg);
+  }
+  
+  .two {
+    transform: rotate(90deg) translate(150px) rotate(-90deg);
+  }
+  
+  .three {
+    transform: rotate(180deg) translate(150px) rotate(-180deg);
+  }
+  
+  .four {
+    transform: rotate(270deg) translate(150px) rotate(-270deg);
+  }
+  .box-scale-down{
+    scale: 0.6;
+  }
+
   .hero-button-container {
     gap: 16px;
     margin-bottom: 16px;
@@ -1168,8 +1345,36 @@ img {
     gap: 24px;
   }
   .logo-image-div {
-    width: 50%;
+    width: 40%;
+    margin-top: 40px;
   }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg) translate(200px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(200px) rotate(-360deg);
+    }
+  }
+  .one {
+    transform: rotate(0deg) translate(200px) rotate(0deg);
+  }
+  
+  .two {
+    transform: rotate(90deg) translate(200px) rotate(-90deg);
+  }
+  
+  .three {
+    transform: rotate(180deg) translate(200px) rotate(-180deg);
+  }
+  
+  .four {
+    transform: rotate(270deg) translate(200px) rotate(-270deg);
+  }
+  .box-scale-down{
+    scale: 0.7;
+  }
+  
   .first {
     height: 89%;
     top: 9%;
@@ -1214,7 +1419,7 @@ img {
     font-size: 14px;
   }
   .explore-padding {
-    padding: 3px 2px;
+    margin: 3px 2px;
   }
   .row-card {
     flex-direction: column;
@@ -1327,7 +1532,33 @@ img {
     gap: 24px;
   }
   .logo-image-div {
-    width: 50%;
+    width: 40%;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg) translate(250px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(250px) rotate(-360deg);
+    }
+  }
+  .one {
+    transform: rotate(0deg) translate(250px) rotate(0deg);
+  }
+  
+  .two {
+    transform: rotate(90deg) translate(250px) rotate(-90deg);
+  }
+  
+  .three {
+    transform: rotate(180deg) translate(250px) rotate(-180deg);
+  }
+  
+  .four {
+    transform: rotate(270deg) translate(250px) rotate(-270deg);
+  }
+  .box-scale-down{
+    scale: 0.7;
   }
   .first {
     height: 89%;
@@ -1370,7 +1601,7 @@ img {
     font-size: 14px;
   }
   .explore-padding {
-    padding: 3px 2px;
+    margin: 3px 2px;
   }
   .row-card {
     flex-direction: column;
@@ -1441,6 +1672,7 @@ img {
   .title-line {
     right: 28%;
     width: 22%;
+    top: 18%;
   }
   .text-xl {
     font-size: 20px;
@@ -1451,8 +1683,34 @@ img {
   .logo-image-div {
     width: 40%;
   }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg) translate(250px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(250px) rotate(-360deg);
+    }
+  }
+  .one {
+    transform: rotate(0deg) translate(250px) rotate(0deg);
+  }
+  
+  .two {
+    transform: rotate(90deg) translate(250px) rotate(-90deg);
+  }
+  
+  .three {
+    transform: rotate(180deg) translate(250px) rotate(-180deg);
+  }
+  
+  .four {
+    transform: rotate(270deg) translate(250px) rotate(-270deg);
+  }
+  .box-scale-down{
+    scale: 0.9;
+  }
   .card {
-    padding: 8px;
+    padding: 12px;
   }
   .scale-down {
     scale: 0.9;
