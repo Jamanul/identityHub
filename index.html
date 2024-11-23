@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      <nav class="vector-container">
+      <nav class="vector-container relative">
         <div class="flex items-center justify-between nav">
           <div class="flex items-center nav-left">
             <img
@@ -40,7 +40,7 @@
             </ul>
           </div>
           <div>
-            <img class="responsive-block" src="./assests/icons/list.svg" alt="menu">
+            <img id="toggleButton" class="responsive-block" src="./assests/icons/list.svg" alt="menu">
             <button
               type="button"
               class="primary-button relative flex items-center responsive-hide"
@@ -53,6 +53,16 @@
               />
             </button>
           </div>
+        </div>
+        <div class="test-section" id="test-section">
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#free-trial">Free Trial</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -88,18 +98,17 @@
             <div
               class="flex justify-center items-center font-primary hero-button-container"
             >
-              <div class="relative cursor-pointer">
+              <div class="relative cursor-pointer ">
                 <button
                 type="button"
-                class="button-glass text-center text-white font-medium"
+                class="primary-button text-center text-white special-gradiant responsive-button"
               >
                 Start free trial
               </button>
-              <img src="./assests/icons/button-border.svg" alt="border" class="absolute test-glass responsive-hide-tab">
             </div>
               <button
                 type="button"
-                class="primary-button relative text-center text-white font-medium button-secondary"
+                class="relative text-center text-white font-medium button-secondary  responsive-button"
               >
                 Use it now
               </button>
@@ -666,11 +675,10 @@
                 <div class="relative cursor-pointer">
                     <button
                     type="button"
-                    class="button-glass text-center text-white font-medium price-button"
+                    class="primary-button special-gradiant-two text-center text-white font-medium price-button"
                   >
                     Get Started
                   </button>
-                  <img src="./assests/icons/stroke.svg" alt="border" class="absolute responsive-hide responsive-hide-tab test-glass transform-buttom ">
                 </div>
                 <div class="flex flex-column">
                     <div class="flex items-center checkmark-container">
@@ -741,14 +749,13 @@
                     <h3 class="font-sora text-white font-medium price">20.99</h3>
                 </div>  
                 <div class="relative cursor-pointer">
-                    <button
-                    type="button"
-                    class="button-glass text-center text-white font-medium price-button"
-                  >
-                    Get Started
-                  </button>
-                  <img src="./assests/icons/stroke.svg" alt="border" class="absolute responsive-hide responsive-hide-tab test-glass transform-buttom">
-                </div>
+                  <button
+                  type="button"
+                  class="primary-button special-gradiant-two text-center text-white font-medium price-button"
+                >
+                  Get Started
+                </button>
+              </div>
                 <div class="flex flex-column">
                     <div class="flex items-center checkmark-container">
                         <img src="./assests/icons/checkmark-blue.svg" alt="checkmark-blue" class="inherit-width">
