@@ -53,38 +53,50 @@ dots.forEach((li,key)=>{
 
 // 
 const toggleButton = document.getElementById("toggleButton");
-const testSection = document.getElementById("test-section");
-const testListItems = document.querySelectorAll(".test-section li");
+const section = document.getElementById("responsive-navbar");
+const listItems = document.querySelectorAll(".responsive-navbar li");
+
+// Set initial state
+let isMenuOpen = false;
 
 toggleButton.addEventListener("click", () => {
-  if (testSection.style.display === "none" || testSection.style.display === "") {
-    testSection.style.display = "block"; // Show the div
-    
-    // Delay to trigger opacity transition
+  if (!isMenuOpen) {
+    // Open the menu
+    section.style.display = "block";
     setTimeout(() => {
-      testSection.style.opacity = 1; // Fade in the entire section
-    }, 10); 
-
-    // Typewriter effect for list items
-    testListItems.forEach((item, index) => {
+      section.style.opacity = 1;
+    }, 10);
+    listItems.forEach((item, index) => {
       setTimeout(() => {
         item.style.opacity = 1;
-        item.style.transform = 'translateY(0)'; // Move to original position
-      }, index * 300); // Delay each item by 300ms
+        item.style.transform = 'translateY(0)';
+      }, index * 300);
     });
+    toggleButton.textContent = "✕";
   } else {
-    // Fade out the entire section
-    testSection.style.opacity = 0;
-
-    // Hide after fade-out completes
+    section.style.opacity = 0;
     setTimeout(() => {
-      testSection.style.display = "none"; 
-      
-      // Reset the list items for next time
-      testListItems.forEach(item => {
+      section.style.display = "none";
+      listItems.forEach(item => {
         item.style.opacity = 0;
-        item.style.transform = 'translateY(10px)'; 
+        item.style.transform = 'translateY(10px)';
       });
-    }, 500); 
+    }, 500);
+    toggleButton.textContent = "☰";
   }
+
+  isMenuOpen = !isMenuOpen; 
 });
+
+function hide() {
+    if (window.innerWidth > 767) {
+      isMenuOpen = false;  
+      section.style.display = "none"; 
+      toggleButton.textContent = "☰";
+    }
+  }
+  window.addEventListener('resize', hide);
+
+  if (window.innerWidth > 767) {
+    hide(); 
+  }
