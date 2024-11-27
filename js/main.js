@@ -1,9 +1,9 @@
 let list =document.querySelector(".slider .list")
-console.log(list)
+//console.log(list)
 let items =document.querySelectorAll(".slider .list .item")
-console.log(items)
+//console.log(items)
 let dots =document.querySelectorAll(".slider .dots li")
-console.log(dots)
+//console.log(dots)
 let prev =document.getElementById("prev")
 let next =document.getElementById("next")
 let active =0
@@ -51,7 +51,7 @@ dots.forEach((li,key)=>{
 
 
 
-// 
+// for responsive navbar
 const toggleButton = document.getElementById("toggleButton");
 const section = document.getElementById("responsive-navbar");
 const listItems = document.querySelectorAll(".responsive-navbar li");
@@ -87,7 +87,7 @@ toggleButton.addEventListener("click", () => {
 
   isMenuOpen = !isMenuOpen; 
 });
-
+// function so that responsive doesnot show on big screens
 function hide() {
     if (window.innerWidth > 767) {
       isMenuOpen = false;  
