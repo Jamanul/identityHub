@@ -1150,6 +1150,14 @@ img {
   .responsive-hide {
     display: none;
   }
+  .contact-svg-icon-container {
+    gap: 16px;
+    padding: 11px 70px 11px 12px !important;
+  }
+  .email-svg-icon-container {
+    padding: 11px 43px 11px 12px !important;
+    gap: 16px;
+}
   .text-xl {
     font-size: 14px;
   }
@@ -1312,6 +1320,9 @@ img {
 .row-card-title {
   font-size: 20px;
   margin-bottom: 12px;
+}
+.row-card-icon-container {
+  gap: 16px;
 }
 .gap-16{
   gap: 8px;
