@@ -1022,6 +1022,7 @@ border: 1.6px solid;  /* White border */
 color: transparent !important;  /* Arrow color */
 transition: transform 0.3s ease;
 font-size: 1px; 
+clip-path: content-box;
 }
 
 /* Override Swiper's default arrow color */
@@ -1034,8 +1035,6 @@ background-size: cover;
 width: 27px;  /* Set this based on your image size */
 height: 24px;
 }
-
-
 /* Custom images for arrows */
 .swiper-button-next::after {
 background-image: url('../assests/icons/next-button.svg');  
