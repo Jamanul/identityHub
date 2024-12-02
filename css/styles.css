@@ -1333,9 +1333,9 @@ transition: inherit;
   }
   .hero-dsc {
     line-height: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 34px;
     padding: 0px 16px;
-  }
+}
   .responsive-padding-fix {
     padding: 0px 4px;
   }
@@ -1391,8 +1391,9 @@ transition: inherit;
     margin-bottom: 16px;
   }
   .hero-title {
-    margin-bottom: 08px;
-  }
+    margin-bottom: 24px;
+    margin-top: 16px;
+}
   .service-container {
     padding-top: 50px;
     padding-bottom: 0px;
