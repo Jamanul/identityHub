@@ -1005,6 +1005,98 @@ img {
   top: 10%;
   right: 0%;
 }
+/* swiper slider */
+.swiper {
+  height: 100%;
+  width: 100%;
+  max-width: 1320px;
+}
+/* Style for both navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+width: 42px !important;  
+height: 44px !important;
+border-radius: 50%;
+background: linear-gradient(315deg, #090edb, #e73dc4);
+border: 1.6px solid;  /* White border */
+color: transparent !important;  /* Arrow color */
+transition: transform 0.3s ease;
+font-size: 1px; 
+}
+
+/* Override Swiper's default arrow color */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+content: '';
+background-repeat:no-repeat ;
+background-position:center ;
+background-size: cover;
+width: 27px;  /* Set this based on your image size */
+height: 24px;
+}
+
+
+/* Custom images for arrows */
+.swiper-button-next::after {
+background-image: url('../assests/icons/next-button.svg');  
+}
+
+.swiper-button-prev::after {
+background-image: url('../assests/icons/prev-button.svg');  
+}
+
+/* Move buttons vertically */
+.swiper-button-next,
+.swiper-button-prev {
+top: 60% !important; /* Adjust this value to move the buttons up or down */
+}
+
+/* Move buttons horizontally */
+.swiper-button-next {
+right: 0px !important;  /* Moves the next button further to the right */
+}
+
+.swiper-button-prev {
+left: 0px !important;  /* Moves the previous button further to the left */
+}
+
+/* General pagination bullets */
+.swiper-pagination-bullet {
+background-color: white !important;  /* All bullets are white */
+width: 6px !important;  /* Bullet size */
+height: 6px !important;
+opacity: 1 !important;  /* Make bullets fully visible */
+transition: border 0.3s ease; 
+margin: 0 8px !important;  /* 16px gap: 8px on each side */ /* Smooth transition for active state */
+}
+
+.swiper-pagination-bullet-active{
+position: relative;
+}
+
+/* Active pagination bullet with gradient border */
+.swiper-pagination-bullet-active::after  {
+content: "";
+position: absolute;
+top: -8px;
+left: -8px;
+right: -8px;
+bottom: -8px;
+border-radius: inherit;
+background: radial-gradient(circle, #090edb, #e73dc4);
+border: 2px solid transparent;
+-webkit-mask: linear-gradient(white, white) content-box,
+  linear-gradient(white, white);
+-webkit-mask-composite: destination-out;
+transition: inherit;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 15%;
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
+}
+/*swiper slider ends  */
 /* testimonial */
 .testimonial-button {
   padding: 5px 9px;
@@ -1059,6 +1151,8 @@ img {
   padding: 40px;
   margin-top: 40px;
   max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .buttons {
   top: 60%;
@@ -1127,6 +1221,8 @@ img {
 }
 .join-us-svg {
   width: 60%;
+  height: 120%;
+  top: 0%;
   left: 35%;
 }
 .join-us-circles {
@@ -1480,6 +1576,13 @@ img {
     height: 50%;
     top: 19%;
   }
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 5%;
+    top: var(--swiper-pagination-top, auto);
+    left: 0;
+    width: 100%;
+}
+
 }
 @media only screen and (min-width: 601px) and (max-width: 767px) {
   .vector-container {
@@ -1667,6 +1770,13 @@ img {
   .slider {
     height: 442px;
   }
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 5%;
+    top: var(--swiper-pagination-top, auto);
+    left: 0;
+    width: 100%;
+}
+
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .vector-container {
